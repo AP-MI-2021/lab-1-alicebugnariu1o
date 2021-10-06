@@ -30,9 +30,6 @@ def get_product(lst):
     for _ in lst:
         p %= _
     return p
-    pass
-
-# codul vostru aici
 
 
 '''
@@ -47,9 +44,6 @@ def get_cmmdc_v1(x, y):
         else:
             x -= y
     return x
-    pass
-
-# codul vostru aici
 
 
 '''
@@ -63,29 +57,26 @@ def get_cmmdc_v2(x, y):
         x = y
         y = rest
     return x
-pass
-
-# codul vostru aici
 
 
 def main():
-    n =int(input("Alegeti:\n1 -> Verificare nr prim.\n2 -> Produsul numerelor din lista. \n3 -> CMMDC V1.\n4 -> CMMDC V2."))
+    n = int(input(
+        "Alegeti:\n1 -> Verificare nr prim.\n2 -> Produsul numerelor din lista. \n3 -> CMMDC V1.\n4 -> CMMDC V2."))
     if n == 1:
-        numar = input ("Introduceti numarul.")
-        print (is_prime(numar))
+        numar = input("Introduceti numarul.")
+        print(is_prime(numar))
     elif n == 2:
         lungime_lista = int(input("Introduceti lungimea listei."))
-        lista =  []
-        for i in range (0 , lungime_lista):
-            numarul = int(input ("Introduceti numarul:"))
+        lista = []
+        for i in range(0, lungime_lista):
+            numarul = int(input("Introduceti numarul:"))
             lista.append(numarul)
-            print (get_product(lista))
+            print(get_product(lista))
     elif n == 3 or n == 4:
         primul_numar = int(input("Introduceti primul numar:"))
         al_doilea_numar = int(input("Introduceti al doilea numar:"))
-        print(get_cmmdc_v1(primul_numar , al_doilea_numar))
-        pass
-# interfata de tip consola aici
+        print(get_cmmdc_v1(primul_numar, al_doilea_numar))
+
 
 if __name__ == '__main__':
     main()
